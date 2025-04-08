@@ -1,9 +1,17 @@
 # Test Framework Documentation
 
 ## Initial Setup
-First, initialize the framework in your test:
+First, create a 'setup' request -- this can be a call to google.com, it doesn't matter.
+
+Inside of 'pre-request scripts' copy the entire contents of framework.js.
+
+Then hit "Send". This will compile the test framework and store it as a global variable.
+
+Second, create some tests by adding this line of code to the top of your post-request scripts:
 
 const Test = eval('(' + pm.globals.get('testFramework') + ')');
+
+All done!
 
 ## Response Code Tests
 
