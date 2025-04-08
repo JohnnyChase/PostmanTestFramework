@@ -52,12 +52,17 @@ Test.IsNull('user', true); // Will match 'user.id', 'user.email', etc.
 Tests if specified fields are not null and not empty.
 
 // Single field
+
 Test.IsNotNull('userId');
 
+
 // Multiple fields
+
 Test.IsNotNull(['userId', 'email']);
 
+
 // With fuzzy search
+
 Test.IsNotNull('user', true); // Will match all user.* properties
 
 ### IsEqual(field, expected)
@@ -143,6 +148,7 @@ The framework can handle nested objects using dot notation:
 }
 
 // You can test:
+
 Test.IsNotNull('user.profile.name');
 Test.IsEqual('user.profile.age', 30);
 
