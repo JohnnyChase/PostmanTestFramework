@@ -37,12 +37,15 @@ Test.Response404(); // Not Found
 Tests if specified fields are null.
 
 // Single field
+
 Test.IsNull('userId');
 
 // Multiple fields
+
 Test.IsNull(['userId', 'email']);
 
 // With fuzzy search
+
 Test.IsNull('user', true); // Will match 'user.id', 'user.email', etc.
 
 ### IsNotNull(whitelist, fuzzySearch = false)
